@@ -28,10 +28,34 @@ function divide(){
   });
 };
 
-addUp().then(function(){
-  return subtract().then(function(){
-    return divide().then(function(){
-      console.log('done!')
+addUp().then(function(data){
+  console.log(data);
+  return subtract(data).then(function(data){
+    console.log(data);
+    return divide(data).then(function(data){
+      console.log(data, 'done!')
     })
   })
 })
+
+function func1(){
+  return new Promise(function(resolve, reject){
+    resolve(3 + 8);
+  });
+};
+
+function func2(){
+  return new Promise(function(resolve, reject){
+    resolve(2 + 7);
+  });
+};
+
+function func3(){
+  return new Promise(function(resolve, reject){
+    resolve(1 + 4);
+  });
+};
+
+Promise.all([func1, func2, func3]).then(function(values){
+  console.log(values)
+});
