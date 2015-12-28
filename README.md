@@ -1,6 +1,8 @@
 # Practice Thy JS
-Promises
-Higher-Order Array Functions
+A place to practice:
+- Promises
+- Higher-Order Array Functions
+- Anything I may not get fully
 
 ### Practicing the art of Array's
 
